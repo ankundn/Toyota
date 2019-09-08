@@ -177,7 +177,8 @@ obj.Shipped
 ]);
 
 console.log('testing...');
-res.end();
+
+res.end("Thank You! Your form has been submitted, your total is $" + total.toFixed(2));
 // res.end();
 // setTimeout(function() {
 //     res.redirect("/")
