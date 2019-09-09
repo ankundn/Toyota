@@ -169,7 +169,7 @@ obj.PartNumber,
 obj.PricePerPart, 
 obj.Quantity, 
 obj.Shipping,
-total,
+obj.total,
 obj.retail,
 obj.oversize,
 obj.Shipped
@@ -179,7 +179,10 @@ obj.Shipped
 console.log('testing...');
 
 //message that comes when form has been submitted
-res.end("Thank You! Your form has been submitted, your total is $" + total.toFixed(2));
+res.end("Thank You! Your form has been submitted,  your cost is $" 
++cost.toFixed(2) + " and your sales tax is $" + salestax.toFixed(2) +
+" and your Shipping cost is $" + shipfee.toFixed(2) + 
+" and your total is $" + total.toFixed(2));
 
 
 // res.end();

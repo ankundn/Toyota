@@ -16,8 +16,9 @@ let oversize = document.getElementById('cont').value;
 let state = document.getElementById('state').value;
 let salestax = document.getElementById('sales');
 let shipfee = document.getElementById('ship');
-let total = document.getElementById('total');
+let total = document.getElementById('total').value;
 let Shipped = document.getElementsByName('rad');
+let cost = document.getElementById('cost').value;
 
 
 //calculation of the cost
@@ -132,10 +133,11 @@ else {
  cost.innerHTML = cost.toFixed(2);
  salestax.innerHTML = salestax.toFixed(2);
  Shipped.innerHTML = shipfee.toFixed(2);
-//  total.innerHTML = total.toFixed(2);
+// total.innerHTML = total.toFixed(2);
 
- document.getElementById('total').value = total;
+ document.getElementById('total').value = total.value;
  total = cost + shipfee + salestax;
+ total.innerHTML = total.toFixed(2);
 
 
 
