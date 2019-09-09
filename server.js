@@ -178,7 +178,10 @@ obj.Shipped
 
 console.log('testing...');
 
+//message that comes when form has been submitted
 res.end("Thank You! Your form has been submitted, your total is $" + total.toFixed(2));
+
+
 // res.end();
 // setTimeout(function() {
 //     res.redirect("/")
@@ -187,6 +190,7 @@ res.end("Thank You! Your form has been submitted, your total is $" + total.toFix
 
 // res.redirect('/')
 // res.end();
+
 });
 
 //notifying the console that the server will listen at port 3000
