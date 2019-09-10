@@ -52,6 +52,7 @@ const connection = mysql.createConnection({
 //the route for the form page
 app.post('/form', (req, res) => {
     const theBody = req.body;
+    
 //object created to pick the inputs from the form
 let obj = {
     CustomerID: theBody.customer,
