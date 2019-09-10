@@ -16,27 +16,28 @@ let oversize = document.getElementById('cont').value;
 let state = document.getElementById('state').value;
 let salestax = document.getElementById('sales');
 let shipfee = document.getElementById('ship');
-let total = document.getElementById('total').value;
+let total = document.getElementById('total');
 let Shipped = document.getElementsByName('rad');
-let cost = document.getElementById('cost').value;
+let cost = document.getElementById('cost');
+let retail = document.getElementById('rc');
 
 
 //calculation of the cost
- cost = parseFloat(price) * parseFloat(quantity);
+ var costed = parseFloat(price) * parseFloat(quantity);
 
  
 
  //sales tax depending on the state chosen 
-if (state.value == 'Kampala' && retail.checked == true) {
-    salestax = (10 / 100) * cost;
+if (state.value == 'Kampala' && retail.checked) {
+    salestax = (10 / 100) * costed;
     document.getElementById('sales').value = salestax;
 }
-else if (state.value == 'Entebbe' && retail.checked == true) {
-    salestax = (5 / 100) * cost;
+else if (state.value == 'Entebbe' && retail.checked) {
+    salestax = (5 / 100) * costed;
     document.getElementById('sales').value = salestax;
 }
-else if (state.value == 'Mbarara' && retail.checked == true) {
-    salestax = (5 / 100) * cost;
+else if (state.value == 'Mbarara' && retail.checked) {
+    salestax = (5 / 100) * costed;
     document.getElementById('sales').value = salestax;
 }
 
@@ -134,15 +135,16 @@ else {
 
 //  alert(`cost` + cost);
 
- document.getElementById('cost').innerHTML = cost.toFixed(2);
- console.log('cost',cost)
- salestax.innerHTML = salestax.toFixed(2);
+ cost.value = costed.toFixed(2);
+
+ //salestax.value = salestax.toFixed(2);
  Shipped.innerHTML = shipfee.toFixed(2);
 // total.innerHTML = total.toFixed(2);
 
- document.getElementById('total').value = total.value;
- total = cost + shipfee + salestax;
- total.innerHTML = total.toFixed(2);
+//  document.getElementById('total').value = total.value;
+ Total = parseFloat(costed) + parseFloat(shipfee) + parseFloat(salestax);
+
+ total.value = Total.toFixed(2);
 
 
 

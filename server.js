@@ -52,7 +52,7 @@ const connection = mysql.createConnection({
 //the route for the form page
 app.post('/form', (req, res) => {
     const theBody = req.body;
-    
+
 //object created to pick the inputs from the form
 let obj = {
     CustomerID: theBody.customer,
@@ -170,7 +170,7 @@ obj.PartNumber,
 obj.PricePerPart, 
 obj.Quantity, 
 obj.Shipping,
-obj.total,
+total,
 obj.retail,
 obj.oversize,
 obj.Shipped
@@ -179,12 +179,17 @@ obj.Shipped
 
 console.log('testing...');
 
-//message that comes when form has been submitted
-res.end("Thank You! Your form has been submitted,  your cost is $" 
-+cost.toFixed(2) + " and your sales tax is $" + salestax.toFixed(2) +
-" and your Shipping cost is $" + shipfee.toFixed(2) + 
-" and your total is $" + total.toFixed(2));
+setTimeout(function() {
+res.redirect("/");
+ 
 
+//message that comes when form has been submitted
+res.end("Thank You! Your form has been submitted, your cost is: $" 
++cost.toFixed(2) + " and your sales tax is: $" + salestax.toFixed(2) +
+" and your Shipping cost is: $" + shipfee.toFixed(2) + 
+" and your total is: $" + total.toFixed(2));
+
+}, 10000);
 
 // res.end();
 // setTimeout(function() {
