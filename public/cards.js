@@ -24,6 +24,7 @@ let cost = document.getElementById('cost').value;
 //calculation of the cost
  cost = parseFloat(price) * parseFloat(quantity);
 
+ 
 
  //sales tax depending on the state chosen 
 if (state.value == 'Kampala' && retail.checked == true) {
@@ -130,7 +131,11 @@ else {
      }
 
  }
- cost.innerHTML = cost.toFixed(2);
+
+//  alert(`cost` + cost);
+
+ document.getElementById('cost').innerHTML = cost.toFixed(2);
+ console.log('cost',cost)
  salestax.innerHTML = salestax.toFixed(2);
  Shipped.innerHTML = shipfee.toFixed(2);
 // total.innerHTML = total.toFixed(2);
