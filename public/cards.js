@@ -13,7 +13,7 @@ const ValidData = () => {
 let price = document.getElementById('ppp').value;
 let quantity = document.getElementById('qty').value;
 let oversize = document.getElementById('cont').value;
-let state = document.getElementById('state').value;
+let state = document.getElementById('state');
 let salestax = document.getElementById('sales');
 let shipfee = document.getElementById('ship');
 let total = document.getElementById('total');
@@ -29,15 +29,15 @@ let retail = document.getElementById('rc');
 
  //sales tax depending on the state chosen 
 if (state.value == 'Kampala' && retail.checked) {
-    salestax = (10 / 100) * costed;
+    salestax = (10/100) * costed;
     document.getElementById('sales').value = salestax;
 }
 else if (state.value == 'Entebbe' && retail.checked) {
-    salestax = (5 / 100) * costed;
+    salestax = (5/100) * costed;
     document.getElementById('sales').value = salestax;
 }
 else if (state.value == 'Mbarara' && retail.checked) {
-    salestax = (5 / 100) * costed;
+    salestax = (5/100) * costed;
     document.getElementById('sales').value = salestax;
 }
 
@@ -207,6 +207,8 @@ else {
 
 
 }
+
+//function to exit the page
 const leave = () => {
 
     if (confirm("Are you sure you want to exit?")) {
@@ -216,6 +218,7 @@ const leave = () => {
 
 }
 
+//function to focus the customer ID text box
 
 const reload = function () {
     document.getElementById("customer").focus();
