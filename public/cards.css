@@ -1,12 +1,17 @@
+
 /* styling the container div that contains the form */
 .container{
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
     background-color:#a0dbce;
     padding: 5px 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
      font-size: 18px; 
 
+}
+h2{
+    color: midnightblue;
+    text-align: center;
 }
 /* styling the mainn div */
 .main{

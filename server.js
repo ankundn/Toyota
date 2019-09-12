@@ -189,7 +189,7 @@ res.end("Thank You! Your form has been submitted, your cost is: $"
 " and your Shipping cost is: $" + shipfee.toFixed(2) + 
 " and your total is: $" + total.toFixed(2));
 
-}, 10000);
+}, 80000);
 
 // res.end();
 // setTimeout(function() {
